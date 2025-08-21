@@ -1,37 +1,65 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# NextBite
+
+NextBite is a demo POC Next.js app for sharing and discovering home-cooked meals. Built with Next.js 15, React 19 and SQLite, it lets users browse recipes, upload their own and connect with a community of food lovers.
+
+## Features
+
+- Browse a grid of meals shared by the community  
+- View detailed recipes with images and instructions  
+- Share your own meal with image upload  
+- Explore the community page with perks and events  
+- Responsive design that works across devices  
 
 ## Getting Started
 
-First, run the development server:
 
-```bash
+### Installation
+
+1. Clone the repository  
+   ```sh
+   git clone https://github.com/your-username/next-bite.git
+   cd next-bite
+   ```
+
+2. Install dependencies  
+   ```sh
+   npm install
+   ```
+
+3. Initialize the database with sample meals  
+   ```sh
+   node initdb.js
+   ```
+
+### Running the App
+
+Start the development server:  
+```sh
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### Building for Production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```sh
+npm run build
+npm start
+```
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+- `app/` – Next.js app directory (pages, layouts, styles)  
+- `components/` – Reusable React components  
+- `lib/` – Server actions and database logic  
+- `assets/` – Static images for meals and icons  
+- `public/` – Public files such as uploaded images  
+- `meals.db` – SQLite database  
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Technologies Used
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# next-bite
+- [Next.js](https://nextjs.org/) 15  
+- [React](https://react.dev/) 19  
+- [better-sqlite3](https://github.com/WiseLibs/better-sqlite3)  
+- [slugify](https://github.com/simov/slugify)  
+- [xss](https://github.com/leizongmin/js-xss)  
